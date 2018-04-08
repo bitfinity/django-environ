@@ -8,11 +8,11 @@ import os
 here = os.path.abspath(os.path.dirname(__file__))
 README = io.open(os.path.join(here, 'README.rst'), encoding="utf8").read()
 
-version = '0.4.4'
+version = '0.4.5'
 author = 'joke2k'
 description = "Django-environ allows you to utilize 12factor inspired environment " \
               "variables to configure your Django application."
-install_requires = ['django', 'six']
+install_requires = ['six']
 
 setup(name='django-environ',
       version=version,
@@ -47,6 +47,7 @@ setup(name='django-environ',
       license='MIT License',
       packages=find_packages(),
       platforms=["any"],
+      tests_require=['flask'],
       include_package_data=True,
       test_suite='environ.test.load_suite',
       zip_safe=False,
